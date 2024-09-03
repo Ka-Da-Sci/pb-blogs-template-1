@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="icon"
+      href="./assets/images/logo-without-name.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style></style>
+  <body>
+    <section id="header" class="py-4 bg-[linear-gradient(0deg,_#FFFFFF,_#FFFFFF)] fixed inset-x-0">
+      <div class="header w-[100%] flex flex-row gap-10 items-center justify-around h-20 px-[5%] py-0">
+        <a href="./test.html" class="logo-brand-name flex items-center">
+          <img class="w-[35px] h-[24.77px]" src="./assets/images/logo-without-name.svg" alt="logo" />
+          <span class="font-['Space_Grotesk'] text-[1.125rem] font-bold leading-[var(--line-height)] text-left text-[rgba(0,_0,_0,_1)] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]">Logo</span>
+        </a>
+        <nav class="flex gap-5 flex-row items-center justify-between w-full">
+          <ul class="nav-ul flex gap-4 flex-row items-center justify-between [list-style:none] ml-auto">
+            <li class="w-max"><a class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]" href="./index.html">Home</a></li>
+            <li class="w-max"><a class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]" href="./index.html#about-us">About Us</a></li>
+            <li class="w-max"><a class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]" href="./index.html#testimonials">Users Experience</a></li>
+            <li class="w-max"><a class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]" href="./index.html#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-toggle hidden">
+          <img
+            class="icon-menu"
+            src="./assets/images/icon-menu.svg"
+            alt="menu-toggle-icon"
+          />
+          <img
+            class="icon-close-menu"
+            src="./assets/images/icon-close-menu.svg"
+            alt="menu-toggle-icon"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="hero" class="pt-20">
+      <div class="hero flex gap-4 flex-col items-center px-[5%] py-14 pb-0">
+        <div id="hero-top" class="hero-top flex gap-4 items-center flex-col w-full max-w-[900px]">
+          <span class="hero-main-phrase font-['Kumbh_Sans'] text-[3.4rem] font-bold leading-normal text-center antialiased text-[rgba(18,20,29,1)]">Get your all social service from  Our Site</span>
+          <span class="hero-sub-phrase font-['Kumbh_Sans'] text-lg font-normal leading-normal text-justify text-[rgba(18,20,29,1)] antialiased w-full max-w-[728.05px]">Social media networks are open to all. Social media is typically used for social interaction and access to news and information, and decision making.</span>
+        </div>
+        <div id="hero-mid" class="hero-mid flex gap-4 items-center w-full justify-center">
+          <div class="hero-strt-free flex justify-center px-[31.2px] py-[16.64px] rounded-[5.2px] bg-[rgba(18,_20,_29,_1)] w-full h-full max-w-[181.4px] max-h-[51.63px]">
+            <a class="font-[Inter] text-base font-semibold leading-normal text-right whitespace-nowrap text-[rgba(255,255,255,1)]" href="./error404.html">Start Free Trial</a>
+          </div>
+          <div class="hero-demo flex gap-[0.4rem] items-center justify-center px-8 py-[14.56px] rounded-[5.2px] border-2 border-solid border-[rgba(18,20,29,1)] bg-[rgba(255,255,255,1)] w-full h-full max-w-[181.4px] max-h-[51.63px]">
+            <img class="w-[18.72px] h-[18.72px] p-0.5" src="./assets/images/play-video-icon.svg" alt="play-video-icon">
+            <a class="whitespace-nowrap font-[Inter] text-[1rem] font-semibold leading-normal text-right text-[rgba(18,20,29,1)]" href="./error404.html">Watch A Demo</a>
+          </div>
+        </div>
+        <div id="hero-bottom" class="hero-bottom flex flex-col items-center gap-8 w-full max-w-[953px] h-full">
+          <div class="hero-rating flex items-center gap-2">
+            <img class="w-full h-full max-w-[99.63px] max-h-[15.7px]" src="./assets/images/hero-stars.svg" alt="star-rating-icons">
+            <span class="font-['Plus_Jakarta_Sans'] text-base font-medium leading-normal text-left whitespace-pre">4900+   5 Stars</span>
+          </div>
+          <div class="hero-main-ph flex justify-center w-full h-full max-w-[482px] max-h-[396px]">
+            <img class="h-auto w-auto max-w-full max-h-full" src="./assets/images/hero-main-image.png" alt="photo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro">
+      <div class="intro px-[5%] py-5 flex gap-8 flex-col w-full">
+        <div class="intro-top pt-[70px] bg-[linear-gradient(180deg,#407BFF_0%,#FFFFFF_68.94%)] flex gap-8 flex-col items-center w-full max-w-[1236px] rounded-[20px]">
+          <h2 class="intro-top-main-phrase w-full h-auto max-w-[567px] font-['Kumbh_Sans'] text-3xl font-bold leading-normal text-center text-[rgba(11,52,142,1)]">Take the lead in smartly social media marketing</h2>
+          <div class="intro-top-divs flex gap-3 justify-center w-full flex-wrap px-[2%] py-0">
+            <div class="intro-strategy flex gap-3 flex-col items-center justify-between w-full p-5 max-w-[330.62px] rounded-[15.9px] border-2 border-solid border-[rgba(18,20,29,0.1)] bg-[rgba(255,255,255,1)]">
+              <img class="w-full h-full max-w-[31px] max-h-[43px]" src="./assets/images/intro-strategy.svg" alt="photo">
+              <h3 class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]">Social Media Strategy</h3>
+              <p class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]">A social media strategy is a summary of everything you plan to do and hope to achieve on social media.</p>
+            </div>
+            <div class="intro-market-plan flex gap-3 flex-col items-center justify-between w-full p-5 max-w-[330.62px] rounded-[15.9px] border-2 border-solid border-[rgba(18,20,29,0.1)] bg-[rgba(255,255,255,1)]">
+              <img class="w-full h-full max-w-[31px] max-h-[43px]" src="./assets/images/intro-market-plan.svg" alt="photo">
+              <h3 class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]">Digital Marketing Plan</h3>
+              <p class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]">Digital marketing is important because it connects a business with its customers & is effective in all industries.</p>
+            </div>
+            <div class="intro-optimize flex gap-3 flex-col items-center justify-between w-full p-5 max-w-[330.62px] rounded-[15.9px] border-2 border-solid border-[rgba(18,20,29,0.1)] bg-[rgba(255,255,255,1)]">
+              <img class="w-full h-full max-w-[31px] max-h-[43px]" src="./assets/images/intro-seo.svg" alt="photo">
+              <h3 class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]">Search Engine Optimization</h3>
+              <p class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]">Search engine optimization (SEO) is the art and science of getting pages to rank higher in search engines.</p>
+            </div>
+          </div>
+        </div>
+        <div class="intro-mid flex gap-4 flex-wrap items-center justify-between bg-[rgba(218,_230,_255,_1)] w-full max-w-[1240px] px-28 py-10">
+          <div class="years-of-experience flex gap-[0.1rem] flex-col">
+            <p class="div-top font-['Kumbh_Sans'] text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]">15</p>
+            <p class="div-bottom font-[Inter] text-[0.87rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Years of experience</p>
+          </div>
+          <div class="social-followers flex gap-[0.1rem] flex-col">
+            <p class="div-top font-['Kumbh_Sans'] text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]">36k</p>
+            <p class="div-bottom font-[Inter] text-[0.87rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Social followers</p>
+          </div>
+          <div class="projects-completed flex gap-[0.1rem] flex-col">
+            <p class="div-top font-['Kumbh_Sans'] text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]">6428</p>
+            <p class="div-bottom font-[Inter] text-[0.87rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Projects completed</p>
+          </div>
+          <div class="social-profiles flex gap-[0.1rem] flex-col">
+            <p class="div-top font-['Kumbh_Sans'] text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]">92k</p>
+            <p class="div-bottom font-[Inter] text-[0.87rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Social profiles</p>
+          </div>
+        </div>
+        <div class="intro-bottom flex flex-col gap-6">
+          <div class="bring-2geda">
+            <img class="w-1/2 h-full max-w-[500px] max-h-[300px] min-w-[200px] rounded-[20px] float-left mr-8" src="./assets/images/bring-2geda.png" alt="photo">
+            <div class="bottom-inner-div">
+              <h2 class="font-['Kumbh_Sans'] text-3xl font-bold leading-normal text-left text-[rgba(18,20,29,1)]">Bring your target users together on social media</h2>
+              <p class="font-['Kumbh_Sans'] text-base font-medium leading-normal text-left text-[rgba(18,_20,_29,_1)] pt-5">Social media audience research isn’t complicated. It’s mainly about narrowing your focus while expanding your reach.</p>
+              <p class="font-[Inter] text-[0.87rem] font-normal leading-[var(--line-height)] text-left text-[rgba(18,_20,_29,_1)] text-base pt-5">We've created a free social media audience research template to help you keep track of all the information you learn as you conduct your research.</p>
+            </div>
+          </div>
+
+          <div class="build-and-reach pt-8">
+            <img class="w-1/2 h-full max-w-[500px] max-h-[300px] min-w-[200px] rounded-[20px] float-right mr-0 ml-8" src="./assets/images/build-and-reach.png" alt="photo">
+            <div class="bottom-inner-div">
+              <h2 class="font-['Kumbh_Sans'] text-3xl font-bold leading-normal text-left text-[rgba(18,20,29,1)]">Build your brand & reach out to social followers</h2>
+              <p class="font-['Kumbh_Sans'] text-base font-medium leading-normal text-left text-[rgba(18,_20,_29,_1)] pt-5">Brand awareness is cited as the top priority for marketers, and social media channels are a one-to-many solution for getting the word out about your products and services. </p>
+              <p class="font-[Inter] text-[0.87rem] font-normal leading-[var(--line-height)] text-left text-[rgba(18,_20,_29,_1)] text-base pt-5">By creating a strong brand presence on social media, you can reach a broader audience & get partners brand advocates to post content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us">
+      <div class="about-us container">
+        <h2>ABOUT US</h2>
+        <div class="about-us-main">
+          <div class="about-us-img">
+            <img src="./assets/images/abt-us-image.png" alt="photo">
+          </div>
+          <div class="about-us-txt">
+            <h3 >The easiest way to promote social media</h3>
+            <span>
+              <h4>Build A Community</h4>
+              <p>Community building is a field of practices directed toward the creation or enhancement of community among individuals.</p>
+            </span>
+            <span>
+              <h4>Video & Live Streaming</h4>
+              <p>Connect your audio and video sources. This involves on audio and video sources to your main live streaming setup.</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="testimonials">
+        <h2>User Experiences</h2>
+        <div class="testimonials-track">
+
+        </div>
+      </div>
+      
+      <div class="testimonials-indicators-div">
+        <div class="t-indicators" id="t-indicators">
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="contact">
+      <div class="contact-form">
+        <div>
+          <h3>Send us a message</h3>
+        </div>
+        <form class="form-container">
+          <div class="lname">
+            <!-- <label for="lname">Last Name:</label> -->
+            <input
+              class="cu"
+              type="text"
+              id="lname"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="fname">
+            <!-- <label for="fname">First Name:</label> -->
+            <input
+              class="cu"
+              type="text"
+              id="fname"
+              name="firstName"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="email">
+            <!-- <label for="email">Email:</label> -->
+            <input
+              class="cu"
+              type="email"
+              id="contact-us-email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="error-message" id="contact-us-email-error-message">Please enter a valid email address.</span>
+          </div>
+          <div class="phone">
+            <!-- <label for="phone">Phone Number:</label> -->
+            <input
+              class="cu"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="message">
+            <!-- <label for="message">Message:</label> -->
+            <textarea
+              class="cutxt"
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <button onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')" type="submit">Send</button>
+        </form>
+      </div>
+      <!-- <div class="contact-ph">
+        <img src="./assets/images/abt-us-image.png" alt="product photo" />
+      </div> -->
+    </section>
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="newsletter-container">
+          <div class="newsletter" id="newsletter">
+            <h2>Newsletter</h2>
+            <form class="newsletter-form" method="">
+              <input id="email" type="email" name="email" placeholder="Your email" required/>
+              <span class="error-message" id="error-message">Please enter a valid email address.</span>
+              <button onclick="emailValidation('email', 'error-message')" type="submit"><img src="./assets/images/customised-send-btn-icon.svg" alt="action-icon"></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./index.html#about-us">About Us</a>
+            </li>
+            <li>
+              <a href="./index.html#testimonials">Users Experience</a>
+            </li>
+            <li>
+              <a href="./index.html#contact-us">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="social-footer">
+            <a class="fb-footer" href="./error404.html"><img src="./assets/images/facebook-icon.svg" alt="social-media-icon"></a>
+            <a class="x-footer" href="./error404.html"><img src="./assets/images/twitter-icon.svg" alt="social-media-icon"></a>
+            <a class="utube-footer" href="./error404.html"><img src="./assets/images/youtube-icon.svg" alt="social-media-icon"></a>
+          </div>
+
+          <p class="copyright-footer">© Copyright 2024 - Wivali AI</p>
+
+        </div>
+      </footer>
+    </section>
+
+    <script src="./assets/index.js"></script>
+    <script>
+      const emailValidation = (emailId, errorMessageId) => {
+        const emailInput = document.getElementById(emailId);
+        const errorMessage = document.getElementById(errorMessageId);
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+        if (!emailPattern.test(emailInput.value)) {
+          event.preventDefault(); 
+          emailInput.classList.add('error');
+          errorMessage.style.display = 'inline';
+        } else {
+          emailInput.classList.remove('error');
+          errorMessage.style.display = 'none';
+        }
+
+        document.getElementById(emailId).oninput = () => {
+          errorMessage.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
