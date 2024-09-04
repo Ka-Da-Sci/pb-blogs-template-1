@@ -1,140 +1,26 @@
 const mobileMenuToggle = document.querySelector(".mobile-toggle");
 const navElementChildren = document.querySelectorAll("nav a");
-const pageData = {
-  usersExperiences: [
-    {
-      reviewerName: "Gilbert Harbert",
-      reviewerPhoto: "./assets/images/gilbert-dp.svg",
-      portfolio: "CEO, NoonBrew",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "They are able to help a startup like mine scale and are very responsive to all of our unique needs.",
-    },
-
-    {
-      reviewerName: "Vincent McSabbu",
-      reviewerPhoto: "./assets/images/vincent-dp.svg",
-      portfolio: "Marketing & Office Coordinator",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "Division of Labor's creative ideas were great, and working with their team was truly easy they were very responsive.",
-    },
-
-    {
-      reviewerName: "Robert Hart",
-      reviewerPhoto: "./assets/images/robert-dp.svg",
-      portfolio: "Owner, Beards of Men",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "We were blown away when we saw Mixland. The combination of social, email, knowledge base, mobile, ets.",
-    },
-    {
-      reviewerName: "Gilbert Harbert",
-      reviewerPhoto: "./assets/images/gilbert-dp.svg",
-      portfolio: "CEO, NoonBrew",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "They are able to help a startup like mine scale and are very responsive to all of our unique needs.",
-    },
-
-    {
-      reviewerName: "Vincent McSabbu",
-      reviewerPhoto: "./assets/images/vincent-dp.svg",
-      portfolio: "Marketing & Office Coordinator",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "Division of Labor’s creative ideas were great, and working with their team was truly easy they were very responsive.",
-    },
-
-    {
-      reviewerName: "Robert Hart",
-      reviewerPhoto: "./assets/images/robert-dp.svg",
-      portfolio: "Owner, Beards of Men",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "We were blown away when we saw Mixland. The combination of social, email, knowledge base, mobile, ets.",
-    },
-    {
-      reviewerName: "Gilbert Harbert",
-      reviewerPhoto: "./assets/images/gilbert-dp.svg",
-      portfolio: "CEO, NoonBrew",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "They are able to help a startup like mine scale and are very responsive to all of our unique needs.",
-    },
-
-    {
-      reviewerName: "Vincent McSabbu",
-      reviewerPhoto: "./assets/images/vincent-dp.svg",
-      portfolio: "Marketing & Office Coordinator",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "Division of Labor’s creative ideas were great, and working with their team was truly easy they were very responsive.",
-    },
-
-    {
-      reviewerName: "Robert Hart",
-      reviewerPhoto: "./assets/images/robert-dp.svg",
-      portfolio: "Owner, Beards of Men",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "We were blown away when we saw Mixland. The combination of social, email, knowledge base, mobile, ets.",
-    },
-    
-    {
-      reviewerName: "Vincent McSabbu",
-      reviewerPhoto: "./assets/images/vincent-dp.svg",
-      portfolio: "Marketing & Office Coordinator",
-      reviewerRating: {
-        excellent: 4,
-        poor: 1,
-      },
-      review:
-        "Division of Labor’s creative ideas were great, and working with their team was truly easy they were very responsive.",
-    },
-  ],
-};
-
 // Manages Mobile Menu Toggles
 mobileMenuToggle.addEventListener("click", function () {
-  document.querySelector("nav").classList.toggle("active");
-  document.querySelector(".icon-menu").classList.toggle("active");
-  document.querySelector(".icon-close-menu").classList.toggle("active");
+  document.querySelector("nav").classList.toggle("opacity-100");
+  document.querySelector("nav").classList.toggle("opacity-0");
+  document.querySelector("nav").classList.toggle("-translate-x-[100px]");
+  document.querySelector(".icon-menu").classList.toggle("hidden");
+  document.querySelector(".icon-menu").classList.toggle("block");
+  document.querySelector(".icon-close-menu").classList.toggle("block");
+  document.querySelector(".icon-close-menu").classList.toggle("hidden");
 });
 
 // Manages Mobile Menu Toggles
 for (let num = 0; num < navElementChildren.length; num++) {
   navElementChildren[num].addEventListener("mouseup", () => {
-    document.querySelector("nav").classList.toggle("active");
-    document.querySelector(".icon-menu").classList.toggle("active");
-    document.querySelector(".icon-close-menu").classList.toggle("active");
+    document.querySelector("nav").classList.toggle("opacity-100");
+    document.querySelector("nav").classList.toggle("opacity-0");
+    document.querySelector("nav").classList.toggle("-translate-x-[100px]");
+    document.querySelector(".icon-menu").classList.toggle("hidden");
+    document.querySelector(".icon-menu").classList.toggle("block");
+    document.querySelector(".icon-close-menu").classList.toggle("block");
+    document.querySelector(".icon-close-menu").classList.toggle("hidden");
   });
 }
 
@@ -142,18 +28,20 @@ for (let num = 0; num < navElementChildren.length; num++) {
 document.addEventListener("click", (event) => {
   const mobileMenu = document.querySelector("nav");
   const innerMobileMenu = document.querySelector(".nav-ul");
-  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileMenuToggle = document.querySelector(".mobile-toggle");
   const faq = document.querySelectorAll(".question");
 
   if (
     !mobileMenu.contains(event.target) &&
     !innerMobileMenu.contains(event.target) &&
-    mobileMenu.classList.contains("active") &&
+    mobileMenu.classList.contains("opacity-100", "-translate-x-[100px]") &&
     !mobileMenuToggle.contains(event.target)
   ) {
-    mobileMenu.classList.remove("active");
-    document.querySelector(".icon-menu").classList.toggle("active");
-    document.querySelector(".icon-close-menu").classList.toggle("active");
+    mobileMenu.classList.remove("opacity-100", "-translate-x-[100px]");
+    document.querySelector(".icon-menu").classList.toggle("hidden");
+    document.querySelector(".icon-menu").classList.toggle("block");
+    document.querySelector(".icon-close-menu").classList.toggle("block");
+    document.querySelector(".icon-close-menu").classList.toggle("hidden");
   }
 
   for (let num = 0; num < faq.length; num++) {
@@ -171,29 +59,32 @@ document.addEventListener("click", (event) => {
     }
   }
 });
-
+const testimonies = document.querySelector(".testimonials-track").children;
 
 document.addEventListener("DOMContentLoaded", () => {
   let testimonialsCount = 0;
-  let slideIndicators = Array.from(
-    document.querySelectorAll(".t-indicators div")
-  );
+  let endTestimonialsCount = +testimonialsCount + 3;
+  let slideIndicators = Array.from(document.querySelectorAll(".t-indicators div"));
   let testimonialSliderIndicators = document.getElementById("t-indicators");
-  const testimonialsTrack = document.querySelector(".testimonials-track");
   
   // Manages the rendering of the Testimonials section
   const testimonialsProtocol = () => {
-    testimonialsTrack.innerHTML = "";
+
+    // testimonialsTrack.innerHTML = "";
     testimonialSliderIndicators.innerHTML = "";
     let indicatorCount = 1;
 
     // Returns 10 if the number of available testimonials is greater than 10, otherwise just return the number of available testimonials.
     const requiredNum = () => {
-      let num = pageData["usersExperiences"].length;
-      if (pageData["usersExperiences"].length > 10){
+      let num = Array.from(testimonies).length;
+      if (Array.from(testimonies).length > 10){
         num = 10;
       } 
       return num;
+    }
+
+    if (endTestimonialsCount > requiredNum()) {
+      endTestimonialsCount = requiredNum();
     }
 
     // creates between 0 and 10 indicator elemnts depending on the value returned by requiredNum function above.
@@ -202,95 +93,73 @@ document.addEventListener("DOMContentLoaded", () => {
       const testimonialSliderIndicatorText = document.createElement("p");
       testimonialSliderIndicatorText.textContent = indicatorCount;
       testimonialSliderIndicator.className = "t-indicator";
-      testimonialSliderIndicator.id = `t-indicator-${indicatorCount - 1}`;
+      testimonialSliderIndicator.classList.add('flex', 'items-center', 'justify-center', 'sm:w-[15px]', 'sm:h-[15px]', 'w-[9px]', 'h-[9px]', 'rounded-[50%]', 'cursor-pointer', 'bg-[rgba(217,217,217,1)]');
+      testimonialSliderIndicatorText.classList.add('hidden');
+      testimonialSliderIndicator.id = `t-indicator-${indicatorCount-1}`;
+  
 
       testimonialSliderIndicator.appendChild(testimonialSliderIndicatorText);
       testimonialSliderIndicators.appendChild(testimonialSliderIndicator);
-      indicatorCount++;
+      indicatorCount ++;
     }
 
     // Renders the most recent testimonials (number depends on the value returned by requiredNum).
-    pageData["usersExperiences"]
-      .slice(testimonialsCount, requiredNum())
-      .forEach((testimonial) => {
-        const testimonialDiv = document.createElement("div");
-        const textDiv = document.createElement("div");
-        const quotationImg = document.createElement("img");
-        const reviewTxt = document.createElement("p");
-        const bioDiv = document.createElement("div");
-        const photoWrapper = document.createElement("div");
-        const photo = document.createElement("img");
-        const reviewSpan = document.createElement("span");
-        const reviewerName = document.createElement("p");
-        const reviewerPortfolio = document.createElement("p");
+    Array.from(testimonies).forEach((testimonial) => {
+      testimonial.style.display = "none";
 
-        testimonialDiv.className = "testimonial";
-        textDiv.className = "testimonial-text-div";
-        bioDiv.className = "reviewerDiv";
-        photoWrapper.className = "reviewer-photo-wrapper";
-        quotationImg.className = "quotation-mark-icon";
-        quotationImg.src = "./assets/images/quotation-mark.svg";
-        reviewTxt.textContent = testimonial["review"];
-        photo.src = testimonial["reviewerPhoto"];
-        reviewerName.textContent = testimonial["reviewerName"];
-        reviewerPortfolio.textContent = testimonial["portfolio"];
+    })
 
-        textDiv.appendChild(quotationImg);
-        textDiv.appendChild(reviewTxt);
-
-        reviewSpan.appendChild(reviewerName);
-        reviewSpan.appendChild(reviewerPortfolio);
-        photoWrapper.appendChild(photo);
-        bioDiv.appendChild(photoWrapper);
-        bioDiv.appendChild(reviewSpan)
-
-        testimonialDiv.appendChild(textDiv);
-        testimonialDiv.appendChild(bioDiv);
-        testimonialsTrack.appendChild(testimonialDiv);
-      });
+    const targetTestimonies = Array.from(testimonies).slice(0, requiredNum()).slice(testimonialsCount, endTestimonialsCount);
+    targetTestimonies.forEach((testimonial) => {
+      testimonial.style.display = "flex";
+    })
 
     testimonialSliderIndicators = document.getElementById("t-indicators");
-    slideIndicators = Array.from(
-      document.querySelectorAll(".t-indicators div")
-    );
-    slideIndicators.forEach((indicator) => {
-      // const indicatorElem = document.getElementById(indicator.id);
-      indicator.classList.remove("active");
-    });
+    slideIndicators = Array.from(document.querySelectorAll(".t-indicators div"));
+    slideIndicators.forEach(indicator => {
+      indicator.classList.remove('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
+    })
 
+    let indicatorIndex = testimonialsCount;
+    if (testimonialsCount >= Array.from(testimonies).length){
+      indicatorIndex = Array.from(testimonies).length - 1;
+    }
     const testimnlChildren = testimonialSliderIndicators.children;
-    console.log(testimnlChildren[testimonialsCount]);
-    testimnlChildren[testimonialsCount].classList.add("active");
-  };
+    testimnlChildren[indicatorIndex].classList.remove('bg-[rgba(217,217,217,1)]');
+    testimnlChildren[indicatorIndex].classList.add('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
 
-  document.addEventListener("click", (event) => {
+  }
+
+  document.addEventListener("click",  (event) => {
     let indicatorIndexes = document.querySelectorAll(".t-indicators div");
-    indicatorIndexes.forEach((index) => {
-      if (index.contains(event.target)) {
-        indicatorIndexes.forEach((indexed) => {
-          indexed.classList.remove("active");
-        });
+    indicatorIndexes.forEach(index => {
+      if (index.contains(event.target)){
+        indicatorIndexes.forEach(indexed => {
+          indexed.classList.remove('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
+        })
         const indexId = index.id;
         const slicedIndex = indexId.split("t-indicator-");
-        testimonialsCount = slicedIndex[slicedIndex.length - 1];
+        testimonialsCount = slicedIndex[slicedIndex.length-1];
+        endTestimonialsCount = +testimonialsCount + 3;
         console.log(testimonialsCount);
         testimonialsProtocol();
       }
-    });
-  });
+    })
+  })
 
-  testimonialsProtocol();
+  // testimonialsProtocol();
 
   const testimonialCarouselSlider = () => {
     testimonialsProtocol();
-    if (testimonialsCount < pageData["usersExperiences"].length - 1) {
-      testimonialsCount++;
-    } else {
+    if (testimonialsCount <= Array.from(testimonies).length - 1){
+      testimonialsCount ++;
+      endTestimonialsCount = testimonialsCount + 3;
+    } else{
       testimonialsCount = 0;
+      endTestimonialsCount = testimonialsCount + 3;
       testimonialCarouselSlider();
     }
-    console.log(testimonialsCount);
-  };
+  }
 
   testimonialCarouselSlider();
 

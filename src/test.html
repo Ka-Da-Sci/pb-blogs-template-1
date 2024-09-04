@@ -25,70 +25,71 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <link rel="stylesheet" href="./assets/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <style></style>
   <body>
     <section
       id="header"
-      class="py-4 bg-[linear-gradient(0deg,_#FFFFFF,_#FFFFFF)] fixed z-10 inset-x-0"
+      class="animate-[header-anim_0.9s_linear] bg-[linear-gradient(0deg,_#FFFFFF,_#FFFFFF)] [animation-fill-mode:forwards] fixed z-10 inset-x-0"
     >
       <div
-        class="header container mx-auto w-[100%] flex flex-row gap-10 items-center justify-around h-20 px-[5%] py-0"
+        class="header container mx-auto flex flex-row gap-10 items-center justify-between sm:justify-around h-[76px] px-[5%] py-0"
       >
         <a href="./test.html" class="logo-brand-name flex items-center">
           <img
-            class="w-[35px] h-[24.77px]"
+            class="w-5 h-[14.15px] sm:w-[35px] sm:h-[24.77px]"
             src="./assets/images/logo-without-name.svg"
             alt="logo"
           />
           <span
-            class="font-['Space_Grotesk'] text-[1.125rem] font-bold leading-[var(--line-height)] text-left text-[rgba(0,_0,_0,_1)] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+            class="font-['Space_Grotesk'] text-sm sm:text-lg font-bold leading-[var(--line-height)] text-left text-[rgba(0,_0,_0,_1)] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
             >Logo</span
           >
         </a>
-        <nav class="flex gap-5 flex-row items-center justify-between w-full">
+        <nav class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]">
           <ul
-            class="nav-ul flex gap-4 flex-row items-center justify-between [list-style:none] ml-auto"
+            class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-between [list-style:none] ml-auto mr-auto sm:mr-0"
           >
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./index.html"
+                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./test.html"
                 >Home</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./index.html#about-us"
+                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./test.html#about-us"
                 >About Us</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./index.html#testimonials"
+                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./test.html#testimonials"
                 >Users Experience</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(0,0,0,1)] font-[Mulish] text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./index.html#contact-us"
+                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./test.html#contact-us"
                 >Contact Us</a
               >
             </li>
           </ul>
         </nav>
-        <div class="mobile-toggle hidden">
+        <div class="mobile-toggle block sm:hidden">
           <img
-            class="icon-menu"
+            class="icon-menu w-[100%] h-[100%] max-w-5 max-h-[11.25px] block bg-[rgba(249,_253,_243,_1)]"
             src="./assets/images/icon-menu.svg"
             alt="menu-toggle-icon"
           />
           <img
-            class="icon-close-menu"
+            class="icon-close-menu w-[100%] h-[100%] max-w-5 max-h-5 hidden bg-[rgba(249,_253,_243,_1)]"
             src="./assets/images/icon-close-menu.svg"
             alt="menu-toggle-icon"
           />
@@ -175,7 +176,7 @@
           class="intro-top pt-[70px] bg-[linear-gradient(180deg,#407BFF_0%,#FFFFFF_68.94%)] flex gap-8 flex-col items-center w-full max-w-[1236px] rounded-[20px]"
         >
           <h2
-            class="intro-top-main-phrase w-full h-auto max-w-[567px] font-['Kumbh_Sans'] text-3xl font-bold leading-normal text-center text-[rgba(11,52,142,1)]"
+            class="intro-top-main-phrase antialiased w-full h-auto max-w-[567px] font-['Kumbh_Sans'] text-3xl font-bold leading-normal text-center text-[rgba(11,52,142,1)]"
           >
             Take the lead in smartly social media marketing
           </h2>
@@ -191,12 +192,12 @@
                 alt="photo"
               />
               <h3
-                class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
               >
                 Social Media Strategy
               </h3>
               <p
-                class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
               >
                 A social media strategy is a summary of everything you plan to
                 do and hope to achieve on social media.
@@ -211,12 +212,12 @@
                 alt="photo"
               />
               <h3
-                class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
               >
                 Digital Marketing Plan
               </h3>
               <p
-                class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
               >
                 Digital marketing is important because it connects a business
                 with its customers & is effective in all industries.
@@ -231,12 +232,12 @@
                 alt="photo"
               />
               <h3
-                class="font-[Inter] text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-base font-bold leading-normal text-left text-[rgba(18,_20,_29,_1)]"
               >
                 Search Engine Optimization
               </h3>
               <p
-                class="font-[Inter] text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
+                class="font-[Inter] antialiased text-xs font-normal leading-normal text-justify text-[rgba(18,_20,_29,_1)]"
               >
                 Search engine optimization (SEO) is the art and science of
                 getting pages to rank higher in search engines.
@@ -742,16 +743,16 @@
         <div class="footer-bottom flex gap-8 flex-col items-center justify-center px-0 py-[70px]">
           <ul class="flex flex-wrap gap-8 items-center justify-center">
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html">Home</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html">Home</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#about-us">About Us</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#about-us">About Us</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#testimonials">Users Experience</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#testimonials">Users Experience</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#contact-us">Contact Us</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#contact-us">Contact Us</a>
             </li>
           </ul>
 
