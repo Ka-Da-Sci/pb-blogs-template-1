@@ -711,48 +711,51 @@
       </div> -->
     </section>
 
-    <section id="footer" class="mt-20 flex flex-col bg-[rgba(0,0,0,1)]">
-      <footer class="footer container mx-auto">
-        <div class="newsletter-container bg-[rgba(48,41,41,1)] h-[180px]">
-          <div class="newsletter flex gap-8 items-center w-full h-full max-w-[502px] m-auto" id="newsletter">
-            <h2 class="font-['Kumbh_Sans'] text-lg font-medium leading-normal text-left text-[rgba(255,255,255,1)]">Newsletter</h2>
-            <form class="newsletter-form relative flex justify-between w-full max-w-[250px] h-10 bg-[rgba(255,255,255,1)] rounded-[50px]" method="">
-              <input
-              class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-[none] font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
+    <section id="newsletter-container" class="bg-[rgba(48,41,41,1)] mt-20 ">
+      <div class="newsletter-container container mx-auto py-10 px-[3%]">
+        <div class="newsletter flex gap-4 items-center w-full h-full max-w-[502px] m-auto justify-center flex-wrap" id="newsletter">
+          <h2 class="font-['Kumbh_Sans'] text-sm sm:text-base md:text-lg font-medium leading-normal text-left text-[rgba(255,255,255,1)]">Newsletter</h2>
+          <form class="newsletter-form relative flex justify-between w-full max-w-[200px] sm:max-w-[250px] h-9 md:h-10 bg-[rgba(255,255,255,1)] rounded-[50px]" method="">
+            <input
+            class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-[none] font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <span class="error-message antialiased text-red-500 hidden absolute -bottom-10 left-[10px]" id="error-message"
+              >Please enter a valid email address.</span
+            >
+            <button class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-8 max-h-8 md:max-w-10 md:max-h-10 self-center pr-[2%]"
+              onclick="emailValidation('email', 'error-message')"
+              type="submit"
+            >
+              <img class="w-full h-full rounded-full""
+                src="./assets/images/customised-send-btn-icon.svg"
+                alt="action-icon"
               />
-              <span class="error-message antialiased text-red-500 hidden absolute -bottom-10 left-[10px]" id="error-message"
-                >Please enter a valid email address.</span
-              >
-              <button class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-10 max-h-9 self-center pr-[2%]"
-                onclick="emailValidation('email', 'error-message')"
-                type="submit"
-              >
-                <img class="w-full h-full rounded-full""
-                  src="./assets/images/customised-send-btn-icon.svg"
-                  alt="action-icon"
-                />
-              </button>
-            </form>
-          </div>
+            </button>
+          </form>
         </div>
+      </div>
+    </section>
+
+    <section id="footer" class="flex flex-col bg-[rgba(0,0,0,1)]">
+      <footer class="footer container mx-auto">
         <div class="footer-bottom flex gap-8 flex-col items-center justify-center px-0 py-[70px]">
           <ul class="flex flex-wrap gap-8 items-center justify-center">
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html">Home</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html">Home</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#about-us">About Us</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#about-us">About Us</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#testimonials">Users Experience</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#testimonials">Users Experience</a>
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#contact-us">Contact Us</a>
+              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./test.html#contact-us">Contact Us</a>
             </li>
           </ul>
 
