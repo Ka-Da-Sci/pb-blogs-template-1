@@ -360,16 +360,16 @@
 
     <section id="about-us">
       <div
-        class="about-us container mx-auto pl-[5%] pr-[5%] py-[70px] flex gap-4 flex-col"
+        class="about-us container mx-auto pl-[5%] pr-[5%] pt-[70px] flex gap-4 flex-col"
       >
         <h2
-          class="font-['Kumbh_Sans'] text-2xl font-bold leading-normal antialiased text-center text-[rgba(18,_20,_29,_1)]"
+          class="font-['Kumbh_Sans'] text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal antialiased text-center text-[rgba(18,_20,_29,_1)]"
         >
           ABOUT US
         </h2>
-        <div class="about-us-main">
+        <div class="about-us-main [@media_(max-width:768px)]:flex [@media_(max-width:768px)]:flex-col [@media_(max-width:768px)]:items-center">
           <div
-            class="about-us-img rounded-[20px] float-left w-1/2 h-full max-w-[500px] max-h-[300px] mr-8 flex justify-center"
+            class="about-us-img rounded-[20px] md:float-left w-full md:w-1/2 h-full max-w-[500px] max-h-[300px] md:mr-8 flex justify-center"
           >
             <img
               class="w-auto h-auto max-w-full rounded-[20px]"
@@ -378,30 +378,30 @@
             />
           </div>
           <div
-            class="about-us-txt antialiased font-['Kumbh_Sans'] text-[1.6875rem] font-bold leading-normal text-left text-[rgba(18,20,29,1)]"
+            class="about-us-txt pt-5 [@media_(max-width:768px)]:flex  [@media_(max-width:768px)]:flex-col  [@media_(max-width:640px)]:items-center"
           >
-            <h3>The easiest way to promote social media</h3>
-            <span class="pt-4">
+            <h3 class="antialiased font-['Kumbh_Sans'] text-lg md:text-xl lg:text-2xl font-bold leading-normal text-center md:text-left text-[rgba(18,20,29,1)]">The easiest way to promote social media</h3>
+            <span class="md:pt-4 flex flex-col md:items-start items-center md:block">
               <h4
-                class="antialiased font-['Kumbh_Sans'] text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
+                class="antialiased font-['Kumbh_Sans'] text-[15px] md:text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
               >
                 Build A Community
               </h4>
               <p
-                class="antialiased font-[Inter] text-base font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                class="antialiased font-[Inter] text-xs sm:text-sm lg:text-base font-normal leading-normal hyphens-auto text-justify sm:text-left text-[rgba(18,20,29,1)]"
               >
                 Community building is a field of practices directed toward the
                 creation or enhancement of community among individuals.
               </p>
             </span>
-            <span class="pt-4">
+            <span class="md:pt-4 flex flex-col md:items-start items-center md:block">
               <h4
-                class="antialiased font-['Kumbh_Sans'] text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
+                class="antialiased font-['Kumbh_Sans'] text-[15px] md:text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
               >
                 Video & Live Streaming
               </h4>
               <p
-                class="antialiased font-[Inter] text-base font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                class="antialiased font-[Inter] text-xs sm:text-sm lg:text-base font-normal leading-normal hyphens-auto text-justify sm:text-left text-[rgba(18,20,29,1)]"
               >
                 Connect your audio and video sources. This involves on audio and
                 video sources to your main live streaming setup.
@@ -413,7 +413,7 @@
     </section>
 
     <section id="testimonials">
-      <div class="testimonials container pt-24 mx-auto my-0 flex flex-col gap-8 overflow-x-hidden rounded-[20px] bg-[linear-gradient(0deg,_#4D84FF_-0.05%,_#F0F0F0_37.11%,_#FFFFFF_48.82%)]">
+      <div class="testimonials container pt-16 md:pt-20 lg:pt-24 mx-auto my-0 flex flex-col gap-8 overflow-x-hidden rounded-[20px] bg-[linear-gradient(0deg,_#4D84FF_-0.05%,_#F0F0F0_37.11%,_#FFFFFF_48.82%)]">
         <h2 class="antialiased -mb-[40px] font-['Kumbh_Sans'] text-2xl font-bold leading-normal text-center text-[rgba(0,0,0,1)]">User Experiences</h2>
         <div class="testimonials-track px-[5%] flex gap-3 items-center justify-evenly w-full max-w-[1241px] h-auto p-[50px] overflow-x-hidden">
           <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
@@ -471,7 +471,7 @@
             </div>
             <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
               <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <im class="w-auto h-auto max-w-full max-h-full"g src="./assets/images/robert-dp.svg" />
+                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
               </div>
               <span class="flex flex-col gap-1"
                 class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
@@ -534,7 +534,7 @@
             </div>
             <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
               <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <im class="w-auto h-auto max-w-full max-h-full"g src="./assets/images/robert-dp.svg" />
+                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
               </div>
               <span class="flex flex-col gap-1"
                 class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
@@ -597,7 +597,7 @@
             </div>
             <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
               <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <im class="w-auto h-auto max-w-full max-h-full"g src="./assets/images/robert-dp.svg" />
+                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
               </div>
               <span class="flex flex-col gap-1"
                 class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
