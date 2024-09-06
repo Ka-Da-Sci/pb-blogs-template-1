@@ -24,6 +24,28 @@ for (let num = 0; num < navElementChildren.length; num++) {
   });
 }
 
+const ratingsVal = document.getElementById("rating-num").textContent;
+
+const ratingsValFrac = () => {
+  const rawVal = parseFloat(ratingsVal);
+  return rawVal % 1;
+}
+
+const caliberateRating = (event) => {
+  const ratingsPar = document.getElementById("star-ratings");
+  const ratingsParChildren = ratingsPar.children;
+  
+  Array.from(ratingsParChildren).slice(0, parseInt(Math.floor(ratingsVal))).forEach((rating) => {
+    rating.classList.remove("bg-gray-500");
+    rating.classList.add("bg-yellow-500");
+  })
+  if (ratingsValFrac() > 0.3 && parseInt(Math.floor(ratingsVal)) < 5){
+    ratingsParChildren[parseInt(Math.floor(ratingsVal))].classList.remove("bg-gray-500");
+    ratingsParChildren[parseInt(Math.floor(ratingsVal))].classList.add('bg-[linear-gradient(to_right,_yellow,_gray)]')
+  }
+}
+caliberateRating();
+
 // Manages Mobile Menu Toggles
 document.addEventListener("click", (event) => {
   const mobileMenu = document.querySelector("nav");
@@ -165,3 +187,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(testimonialCarouselSlider, 20000);
 });
+
+// EMAIL FORM INPUTS VALIDATION FUNCTION
+const emailValidation = (emailId, errorMessageId) => {
+  const emailInput = document.getElementById(emailId);
+  const errorMessage = document.getElementById(errorMessageId);
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(emailInput.value)) {
+    event.preventDefault();
+    emailInput.classList.add("error");
+    errorMessage.style.display = "inline";
+  } else {
+    emailInput.classList.remove("error");
+    errorMessage.style.display = "none";
+  }
+
+  document.getElementById(emailId).oninput = () => {
+    errorMessage.style.display = "none";
+  };
+};
