@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <style></style>
@@ -42,7 +42,9 @@
             >Logo</span
           >
         </a>
-        <nav class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]">
+        <nav
+          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
+        >
           <ul
             class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-between [list-style:none] ml-auto mr-auto sm:mr-0"
           >
@@ -91,12 +93,29 @@
       </div>
     </section>
 
-    <section id="error404" class="h-screen flex flex-col items-center justify-center">
-      <div class="error404 pt-[80px] pb-[20px] flex flex-col justify-center w-full h-full max-w-[540px] max-h-[540px]">
-          <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/error404-photo.png" alt="error404-photo">
-          <a class="p-2 no-underline text-[rgba(51,_51,_51,_1)] font-['Kumbh_Sans'] text-sm md:text-base font-normal leading-normal text-center whitespace-nowrap flex justify-center items-center" href="./index.html"><img class="w-[14px] h-[11.19px] md:w-[18.41px] md:h-[14.71px]" src="./assets/images/back-vector.png" alt="back-to-home-sign">Return to home</a>
+    <section
+      id="error404"
+      class="h-screen flex flex-col items-center justify-center"
+    >
+      <div
+        class="error404 pt-[80px] pb-[20px] flex flex-col justify-center w-full h-full max-w-[540px] max-h-[540px]"
+      >
+        <img
+          class="w-auto h-auto max-w-full max-h-full"
+          src="./assets/images/error404-photo.png"
+          alt="error404-photo"
+        />
+        <a
+          class="p-2 no-underline text-[rgba(51,_51,_51,_1)] font-['Kumbh_Sans'] text-sm md:text-base font-normal leading-normal text-center whitespace-nowrap flex justify-center items-center"
+          href="./index.html"
+          ><img
+            class="w-[14px] h-[11.19px] md:w-[18.41px] md:h-[14.71px]"
+            src="./assets/images/back-vector.png"
+            alt="back-to-home-sign"
+          />Return to home</a
+        >
       </div>
-  </section>
+    </section>
 
     <script src="./assets/index.js"></script>
   </body>
