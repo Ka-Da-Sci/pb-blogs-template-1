@@ -81,6 +81,7 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
 const testimonies = document.querySelector(".testimonials-track").children;
 
 document.addEventListener("DOMContentLoaded", () => {
