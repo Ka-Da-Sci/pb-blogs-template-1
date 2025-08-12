@@ -25,7 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="stylesheet" href="./build-styles.css">
+    <link rel="stylesheet" href="./build-styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <style></style>
@@ -48,11 +48,11 @@
             >Logo</span
           >
         </a>
-                <nav
-          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
+        <nav
+          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[30%] max-[450]:w-[45%] sm:w-full max-sm:rounded-tl-[5.2px] fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
         >
           <ul
-            class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-between [list-style:none] ml-auto mr-auto sm:mr-0"
+            class="nav-ul flex gap-4 flex-col sm:flex-row max-sm:items-start items-center justify-between [list-style:none] ml-auto mr-auto sm:mr-0"
           >
             <li class="w-max">
               <a
@@ -84,7 +84,7 @@
             </li>
           </ul>
         </nav>
-        <div class="mobile-toggle block sm:hidden">
+        <div class="mobile-toggle hover:cursor-pointer block sm:hidden">
           <img
             class="icon-menu w-[100%] h-[100%] max-w-5 max-h-[11.25px] block bg-[rgba(249,_253,_243,_1)]"
             src="./assets/images/icon-menu.svg"
@@ -100,7 +100,9 @@
     </section>
 
     <section id="hero" class="pt-20">
-      <div class="hero container mx-auto flex gap-4 flex-col items-center px-[5%] py-5 sm:py-14 pb-0">
+      <div
+        class="hero container mx-auto flex gap-4 flex-col items-center px-[5%] py-5 sm:py-14 pb-0"
+      >
         <div
           id="hero-top"
           class="hero-top flex gap-4 items-center flex-col w-full max-w-[900px]"
@@ -148,20 +150,43 @@
           id="hero-bottom"
           class="hero-bottom flex flex-col items-center gap-8 w-full max-w-[953px] h-full"
         >
-          <div class="hero-rating flex items-center w-full justify-center flex-wrap gap-2">
-
-            <div class="star-ratings flex justify-center items-center" id="star-ratings">
-              <span class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"></span>
-              <span class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"></span>
-              <span class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"></span>
-              <span class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"></span>
-              <span class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"></span>
+          <div
+            class="hero-rating flex items-center w-full justify-center flex-wrap gap-2"
+          >
+            <div
+              class="star-ratings flex justify-center items-center"
+              id="star-ratings"
+            >
+              <span
+                class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"
+              ></span>
+              <span
+                class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"
+              ></span>
+              <span
+                class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"
+              ></span>
+              <span
+                class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"
+              ></span>
+              <span
+                class="bg-gray-500 w-4 h-4 [clip-path:polygon(_42.81%_7.169%,42.81%_7.169%,43.541%_5.556%,44.571%_4.302%,45.825%_3.405%,47.229%_2.868%,48.707%_2.688%,50.186%_2.868%,51.589%_3.405%,52.843%_4.302%,53.874%_5.556%,54.605%_7.169%,61.237%_28.516%,61.237%_28.516%,61.532%_29.29%,61.911%_30.008%,62.369%_30.662%,62.898%_31.247%,63.49%_31.758%,64.137%_32.189%,64.833%_32.533%,65.569%_32.787%,66.339%_32.943%,67.134%_32.996%,88.597%_32.996%,88.597%_32.996%,90.29%_33.225%,91.75%_33.862%,92.952%_34.832%,93.875%_36.062%,94.495%_37.477%,94.789%_39.003%,94.734%_40.565%,94.306%_42.089%,93.483%_43.502%,92.242%_44.727%,74.878%_57.92%,74.878%_57.92%,74.265%_58.452%,73.73%_59.052%,73.276%_59.709%,72.907%_60.416%,72.626%_61.162%,72.434%_61.939%,72.336%_62.738%,72.333%_63.549%,72.429%_64.362%,72.626%_65.17%,79.258%_86.516%,79.258%_86.516%,79.573%_88.271%,79.445%_89.919%,78.934%_91.415%,78.101%_92.713%,77.006%_93.766%,75.709%_94.53%,74.271%_94.958%,72.753%_95.004%,71.214%_94.622%,69.716%_93.766%,52.352%_80.574%,52.352%_80.574%,51.679%_80.128%,50.968%_79.781%,50.23%_79.533%,49.473%_79.385%,48.707%_79.335%,47.941%_79.385%,47.185%_79.533%,46.446%_79.781%,45.736%_80.128%,45.062%_80.574%,27.699%_93.766%,27.699%_93.766%,26.2%_94.622%,24.662%_95.004%,23.143%_94.958%,21.706%_94.53%,20.409%_93.766%,19.314%_92.713%,18.48%_91.415%,17.969%_89.919%,17.841%_88.271%,18.156%_86.516%,24.789%_65.17%,24.789%_65.17%,24.986%_64.362%,25.082%_63.549%,25.079%_62.738%,24.98%_61.939%,24.789%_61.162%,24.507%_60.416%,24.138%_59.709%,23.685%_59.052%,23.15%_58.452%,22.536%_57.92%,5.172%_44.727%,5.172%_44.727%,3.931%_43.502%,3.108%_42.089%,2.681%_40.565%,2.626%_39.003%,2.92%_37.477%,3.539%_36.062%,4.462%_34.832%,5.665%_33.862%,7.124%_33.225%,8.817%_32.996%,30.28%_32.996%,30.28%_32.996%,31.075%_32.943%,31.845%_32.787%,32.582%_32.533%,33.277%_32.189%,33.925%_31.758%,34.517%_31.247%,35.045%_30.662%,35.503%_30.008%,35.883%_29.29%,36.177%_28.516%,42.81%_7.169%_)]"
+              ></span>
             </div>
 
-            <div 
+            <div
               class="font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
-              >4900+ <span onchange="caliberateRating(event)" onload="caliberateRating(event)" id="rating-num" class="font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]">3.5</span> Stars</div
             >
+              4900+
+              <span
+                onchange="caliberateRating(event)"
+                onload="caliberateRating(event)"
+                id="rating-num"
+                class="font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
+                >3.5</span
+              >
+              Stars
+            </div>
           </div>
           <div
             class="hero-main-ph flex justify-center w-full h-full max-w-[482px] max-h-[396px]"
@@ -177,7 +202,9 @@
     </section>
 
     <section id="intro">
-      <div class="intro container mx-auto px-[5%] py-5 flex gap-8 flex-col w-full">
+      <div
+        class="intro container mx-auto px-[5%] py-5 flex gap-8 flex-col w-full"
+      >
         <div
           class="intro-top pt-14 md:pt-[70px] bg-[linear-gradient(180deg,#407BFF_0%,#FFFFFF_68.94%)] flex gap-8 flex-col items-center w-full max-w-[1236px] rounded-[20px]"
         >
@@ -254,7 +281,9 @@
         <div
           class="intro-mid flex gap-4 flex-wrap items-center justify-center bg-[rgba(218,_230,_255,_1)] w-full max-w-[1240px] px-24 sm:px-28 py-10"
         >
-          <div class="years-of-experience flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start">
+          <div
+            class="years-of-experience flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start"
+          >
             <p
               class="div-top font-['Kumbh_Sans'] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]"
             >
@@ -266,7 +295,9 @@
               Years of experience
             </p>
           </div>
-          <div class="social-followers flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start">
+          <div
+            class="social-followers flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start"
+          >
             <p
               class="div-top font-['Kumbh_Sans'] text-xl sm:text-2xl md:text-3xlslg:text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]"
             >
@@ -278,7 +309,9 @@
               Social followers
             </p>
           </div>
-          <div class="projects-completed flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start">
+          <div
+            class="projects-completed flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start"
+          >
             <p
               class="div-top font-['Kumbh_Sans'] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]"
             >
@@ -290,7 +323,9 @@
               Projects completed
             </p>
           </div>
-          <div class="social-profiles flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start">
+          <div
+            class="social-profiles flex gap-[0.1rem] flex-col mx-auto items-center sm:items-start"
+          >
             <p
               class="div-top font-['Kumbh_Sans'] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-normal text-left text-[rgba(18,20,29,1)]"
             >
@@ -304,7 +339,9 @@
           </div>
         </div>
         <div class="intro-bottom flex flex-col gap-6">
-          <div class="bring-2geda [@media_(max-width:640px)]:flex [@media_(max-width:640px)]:flex-col [@media_(max-width:640px)]:items-center">
+          <div
+            class="bring-2geda [@media_(max-width:640px)]:flex [@media_(max-width:640px)]:flex-col [@media_(max-width:640px)]:items-center"
+          >
             <img
               class="w-full sm:w-1/2 h-full max-w-[500px] max-h-[300px] min-w-[200px] rounded-[20px] float-none sm:float-left sm:mr-8"
               src="./assets/images/bring-2geda.png"
@@ -373,7 +410,9 @@
         >
           ABOUT US
         </h2>
-        <div class="about-us-main [@media_(max-width:768px)]:flex [@media_(max-width:768px)]:flex-col [@media_(max-width:768px)]:items-center">
+        <div
+          class="about-us-main [@media_(max-width:768px)]:flex [@media_(max-width:768px)]:flex-col [@media_(max-width:768px)]:items-center"
+        >
           <div
             class="about-us-img rounded-[20px] md:float-left w-full md:w-1/2 h-full max-w-[500px] max-h-[300px] md:mr-8 flex justify-center"
           >
@@ -384,10 +423,16 @@
             />
           </div>
           <div
-            class="about-us-txt pt-5 [@media_(max-width:768px)]:flex  [@media_(max-width:768px)]:flex-col  [@media_(max-width:640px)]:items-center"
+            class="about-us-txt pt-5 [@media_(max-width:768px)]:flex [@media_(max-width:768px)]:flex-col [@media_(max-width:640px)]:items-center"
           >
-            <h3 class="antialiased font-['Kumbh_Sans'] text-lg md:text-xl lg:text-2xl font-bold leading-normal text-center md:text-left text-[rgba(18,20,29,1)]">The easiest way to promote social media</h3>
-            <span class="md:pt-4 flex flex-col md:items-start items-center md:block">
+            <h3
+              class="antialiased font-['Kumbh_Sans'] text-lg md:text-xl lg:text-2xl font-bold leading-normal text-center md:text-left text-[rgba(18,20,29,1)]"
+            >
+              The easiest way to promote social media
+            </h3>
+            <span
+              class="md:pt-4 flex flex-col md:items-start items-center md:block"
+            >
               <h4
                 class="antialiased font-['Kumbh_Sans'] text-[15px] md:text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
               >
@@ -400,7 +445,9 @@
                 creation or enhancement of community among individuals.
               </p>
             </span>
-            <span class="md:pt-4 flex flex-col md:items-start items-center md:block">
+            <span
+              class="md:pt-4 flex flex-col md:items-start items-center md:block"
+            >
               <h4
                 class="antialiased font-['Kumbh_Sans'] text-[15px] md:text-lg font-bold leading-normal text-left text-[rgba(18,20,29,1)] pt-5"
               >
@@ -419,216 +466,428 @@
     </section>
 
     <section id="testimonials" class="mx-[3%]">
-      <div class="testimonials container pt-16 md:pt-20 lg:pt-24 mx-auto my-0 flex flex-col gap-8 overflow-x-hidden rounded-[20px] bg-[linear-gradient(0deg,_#4D84FF_-0.05%,_#F0F0F0_37.11%,_#FFFFFF_48.82%)]">
-        <h2 class="antialiased -mb-[40px] font-['Kumbh_Sans'] text-2xl font-bold leading-normal text-center text-[rgba(0,0,0,1)]">User Experiences</h2>
-        <div class="testimonials-track px-[5%] flex gap-3 items-center justify-evenly w-full max-w-[1241px] h-auto p-[50px] overflow-x-hidden">
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+      <div
+        class="testimonials container pt-16 md:pt-20 lg:pt-24 mx-auto my-0 flex flex-col gap-8 overflow-x-hidden rounded-[20px] bg-[linear-gradient(0deg,_#4D84FF_-0.05%,_#F0F0F0_37.11%,_#FFFFFF_48.82%)]"
+      >
+        <h2
+          class="antialiased -mb-[40px] font-['Kumbh_Sans'] text-2xl font-bold leading-normal text-center text-[rgba(0,0,0,1)]"
+        >
+          User Experiences
+        </h2>
+        <div
+          class="testimonials-track px-[5%] flex gap-3 items-center justify-evenly w-full max-w-[1241px] h-auto p-[50px] overflow-x-hidden"
+        >
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 They are able to help a startup like mine scale and are very
                 responsive to all of our unique needs.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/gilbert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/gilbert-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Gilbert Harbert</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">CEO, NoonBrew</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Gilbert Harbert
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  CEO, NoonBrew
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 Division of Labor's creative ideas were great, and working with
                 their team was truly easy they were very responsive.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/vincent-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/vincent-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Vincent McSabbu</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Marketing &amp; Office Coordinator</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Vincent McSabbu
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Marketing &amp; Office Coordinator
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 We were blown away when we saw Mixland. The combination of
                 social, email, knowledge base, mobile, ets.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/robert-dp.svg"
+                />
               </div>
-              <span class="flex flex-col gap-1"
-                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Owner, Beards of Men</p></span
+              <span
+                class="flex flex-col gap-1"
+                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                ><p>Robert Hart</p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Owner, Beards of Men
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 They are able to help a startup like mine scale and are very
                 responsive to all of our unique needs.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/gilbert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/gilbert-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Gilbert Harbert</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">CEO, NoonBrew</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Gilbert Harbert
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  CEO, NoonBrew
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 Division of Labor’s creative ideas were great, and working with
                 their team was truly easy they were very responsive.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/vincent-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/vincent-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Vincent McSabbu</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Marketing &amp; Office Coordinator</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Vincent McSabbu
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Marketing &amp; Office Coordinator
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 We were blown away when we saw Mixland. The combination of
                 social, email, knowledge base, mobile, ets.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/robert-dp.svg"
+                />
               </div>
-              <span class="flex flex-col gap-1"
-                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Owner, Beards of Men</p></span
+              <span
+                class="flex flex-col gap-1"
+                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                ><p>Robert Hart</p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Owner, Beards of Men
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 They are able to help a startup like mine scale and are very
                 responsive to all of our unique needs.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/gilbert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/gilbert-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Gilbert Harbert</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">CEO, NoonBrew</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Gilbert Harbert
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  CEO, NoonBrew
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 Division of Labor’s creative ideas were great, and working with
                 their team was truly easy they were very responsive.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/vincent-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/vincent-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Vincent McSabbu</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Marketing &amp; Office Coordinator</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Vincent McSabbu
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Marketing &amp; Office Coordinator
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 We were blown away when we saw Mixland. The combination of
                 social, email, knowledge base, mobile, ets.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/robert-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/robert-dp.svg"
+                />
               </div>
-              <span class="flex flex-col gap-1"
-                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]" ><p>Robert Hart</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Owner, Beards of Men</p></span
+              <span
+                class="flex flex-col gap-1"
+                class="font-[Inter] tex antialiasedt-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                ><p>Robert Hart</p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Owner, Beards of Men
+                </p></span
               >
             </div>
           </div>
-          <div class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]">
-            <div class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6">
+          <div
+            class="testimonial flex flex-col p-[10px] gap-8 items-center w-full max-w-[322.66px] min-w-[200px] sm:min-w-[300px] h-auto rounded-[6.78px] border border-solid border-[rgba(0,0,0,0.1)] bg-[rgba(255,_255,_255,_1)] animate-[slider-anim_5s_ease-in]"
+          >
+            <div
+              class="testimonial-text-div flex flex-col w-full max-w-[276.13px] gap-6"
+            >
               <img
                 class="quotation-mark-icon w-6 h-[18.66px]"
                 src="./assets/images/quotation-mark.svg"
               />
-              <p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">
+              <p
+                class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+              >
                 Division of Labor’s creative ideas were great, and working with
                 their team was truly easy they were very responsive.
               </p>
             </div>
-            <div class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]">
-              <div class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center">
-                <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/vincent-dp.svg" />
+            <div
+              class="reviewerDiv self-start flex gap-2 items-center w-full max-w-full h-auto rounded-[6.78px]"
+            >
+              <div
+                class="reviewer-photo-wrapper w-full h-full max-w-10 max-h-10 overflow-hidden rounded-full [aspect-ratio:1/1] flex justify-center"
+              >
+                <img
+                  class="w-auto h-auto max-w-full max-h-full"
+                  src="./assets/images/vincent-dp.svg"
+                />
               </div>
               <span class="flex flex-col gap-1"
-                ><p class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]">Vincent McSabbu</p>
-                <p class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]">Marketing &amp; Office Coordinator</p></span
+                ><p
+                  class="font-[Inter] antialiased text-xs font-semibold leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Vincent McSabbu
+                </p>
+                <p
+                  class="antialiased font-[Inter] text-[0.68rem] font-normal leading-normal text-left text-[rgba(18,20,29,1)]"
+                >
+                  Marketing &amp; Office Coordinator
+                </p></span
               >
             </div>
           </div>
@@ -636,17 +895,29 @@
       </div>
 
       <div class="testimonials-indicators-div container mx-auto pt-2">
-        <div class="t-indicators flex items-center justify-center mx-auto my-0 gap-2.5" id="t-indicators"></div>
+        <div
+          class="t-indicators flex items-center justify-center mx-auto my-0 gap-2.5"
+          id="t-indicators"
+        ></div>
       </div>
     </section>
 
-    <section id="contact-us" class="contact container mx-auto flex gap-8 justify-center items-center pl-[3%] pr-[3%] pt-20">
-      <div class="contact-form flex justify-center gap-6 flex-col items-center font-['Kumbh_Sans']">
+    <section
+      id="contact-us"
+      class="contact container mx-auto flex gap-8 justify-center items-center pl-[3%] pr-[3%] pt-20"
+    >
+      <div
+        class="contact-form flex justify-center gap-6 flex-col items-center font-['Kumbh_Sans']"
+      >
         <div>
           <h3>Send us a message</h3>
         </div>
-        <form class="form-container grid grid-cols-[1fr_1fr] gap-4 w-full sm:w-[500px]">
-          <div class="lname bg-[rgba(242,242,242,1)] row-start-1 row-end-2 col-start-1 col-end-2">
+        <form
+          class="form-container grid grid-cols-[1fr_1fr] gap-4 w-full sm:w-[500px]"
+        >
+          <div
+            class="lname bg-[rgba(242,242,242,1)] row-start-1 row-end-2 col-start-1 col-end-2"
+          >
             <!-- <label for="lname">Last Name:</label> -->
             <input
               class="cu antialiased outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-3 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border border-solid border-[rgba(189,189,189,1)]"
@@ -657,7 +928,9 @@
               required
             />
           </div>
-          <div class="fname bg-[rgba(242,242,242,1)] row-start-1 row-end-2 col-start-2 col-end-3">
+          <div
+            class="fname bg-[rgba(242,242,242,1)] row-start-1 row-end-2 col-start-2 col-end-3"
+          >
             <!-- <label for="fname">First Name:</label> -->
             <input
               class="cu antialiased outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-3 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border border-solid border-[rgba(189,189,189,1)]"
@@ -668,7 +941,9 @@
               required
             />
           </div>
-          <div class="email bg-[rgba(242,242,242,1)] relative row-start-2 row-end-3 col-start-1 col-end-3">
+          <div
+            class="email bg-[rgba(242,242,242,1)] relative row-start-2 row-end-3 col-start-1 col-end-3"
+          >
             <!-- <label for="email">Email:</label> -->
             <input
               class="cu antialiased outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-3 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border border-solid border-[rgba(189,189,189,1)]"
@@ -678,11 +953,15 @@
               placeholder="Email"
               required
             />
-            <span class="error-message text-xs text-red-500 antialiased hidden absolute -bottom-[15px] left-0" id="contact-us-email-error-message"
+            <span
+              class="error-message text-xs text-red-500 antialiased hidden absolute -bottom-[15px] left-0"
+              id="contact-us-email-error-message"
               >Please enter a valid email address.</span
             >
           </div>
-          <div class="phone bg-[rgba(242,242,242,1)] row-start-3 row-end-4 col-[span_2]">
+          <div
+            class="phone bg-[rgba(242,242,242,1)] row-start-3 row-end-4 col-[span_2]"
+          >
             <!-- <label for="phone">Phone Number:</label> -->
             <input
               class="cu antialiased outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-3 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border border-solid border-[rgba(189,189,189,1)]"
@@ -693,7 +972,9 @@
               required
             />
           </div>
-          <div class="message bg-[rgba(242,242,242,1)] row-start-4 row-end-5 col-[span_2]">
+          <div
+            class="message bg-[rgba(242,242,242,1)] row-start-4 row-end-5 col-[span_2]"
+          >
             <!-- <label for="message">Message:</label> -->
             <textarea
               class="cutxt antialiased outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-3 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border border-solid border-[rgba(189,189,189,1)]"
@@ -704,7 +985,8 @@
               required
             ></textarea>
           </div>
-          <button class="row-start-5 row-end-6 col-[span_2] px-[10px] py-3 text-[rgba(255,255,255,1)] bg-[rgba(63,123,255,1)] border border-solid border-[rgba(63,123,255,1)] rounded-[5px] font-['Kumbh_Sans'] font-medium text-base"
+          <button
+            class="row-start-5 row-end-6 col-[span_2] px-[10px] py-3 text-[rgba(255,255,255,1)] bg-[rgba(63,123,255,1)] border border-solid border-[rgba(63,123,255,1)] rounded-[5px] font-['Kumbh_Sans'] font-medium text-base"
             onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
             type="submit"
           >
@@ -717,30 +999,42 @@
       </div> -->
     </section>
 
-    <section id="newsletter-container" class="bg-[rgba(48,41,41,1)] mt-20 ">
+    <section id="newsletter-container" class="bg-[rgba(48,41,41,1)] mt-20">
       <div class="newsletter-container container mx-auto py-10 px-[3%]">
-        <div class="newsletter flex gap-4 items-center w-full h-full max-w-[502px] m-auto justify-center flex-wrap" id="newsletter">
-          <h2 class="font-['Kumbh_Sans'] text-sm sm:text-base md:text-lg font-medium leading-normal text-left text-[rgba(255,255,255,1)]">Newsletter</h2>
-          <form class="newsletter-form relative flex justify-between w-full max-w-[200px] sm:max-w-[250px] h-9 md:h-10 bg-[rgba(255,255,255,1)] rounded-[50px]" method="">
+        <div
+          class="newsletter flex gap-4 items-center w-full h-full max-w-[502px] m-auto justify-center flex-wrap"
+          id="newsletter"
+        >
+          <h2
+            class="font-['Kumbh_Sans'] text-sm sm:text-base md:text-lg font-medium leading-normal text-left text-[rgba(255,255,255,1)]"
+          >
+            Newsletter
+          </h2>
+          <form
+            class="newsletter-form relative flex justify-between w-full max-w-[200px] sm:max-w-[250px] h-9 md:h-10 bg-[rgba(255,255,255,1)] rounded-[50px]"
+            method=""
+          >
             <input
-            class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-0 font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
+              class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-0 font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
               id="email"
               type="email"
               name="email"
               placeholder="Your email"
               required
             />
-            <span class="error-message text-xs antialiased text-red-500 hidden absolute -bottom-5 left-[10px]" id="error-message"
+            <span
+              class="error-message text-xs antialiased text-red-500 hidden absolute -bottom-5 left-[10px]"
+              id="error-message"
               >Please enter a valid email address.</span
             >
-            <button class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-8 max-h-8 md:max-w-10 md:max-h-10 self-center pr-[2%]"
+            <button
+              class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-8 max-h-8 md:max-w-10 md:max-h-10 self-center pr-[2%]"
               onclick="emailValidation('email', 'error-message')"
               type="submit"
             >
               <img class="w-full h-full rounded-full""
-                src="./assets/images/customised-send-btn-icon.svg"
-                alt="action-icon"
-              />
+              src="./assets/images/customised-send-btn-icon.svg"
+              alt="action-icon" />
             </button>
           </form>
         </div>
@@ -749,41 +1043,67 @@
 
     <section id="footer" class="flex flex-col bg-[rgba(0,0,0,1)]">
       <footer class="footer container mx-auto">
-        <div class="footer-bottom flex gap-8 flex-col items-center justify-center px-0 py-[70px]">
+        <div
+          class="footer-bottom flex gap-8 flex-col items-center justify-center px-0 py-[70px]"
+        >
           <ul class="flex flex-wrap gap-8 items-center justify-center">
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html">Home</a>
+              <a
+                class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
+                href="./index.html"
+                >Home</a
+              >
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#about-us">About Us</a>
+              <a
+                class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
+                href="./index.html#about-us"
+                >About Us</a
+              >
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#testimonials">Users Experience</a>
+              <a
+                class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
+                href="./index.html#testimonials"
+                >Users Experience</a
+              >
             </li>
             <li>
-              <a class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]" href="./index.html#contact-us">Contact Us</a>
+              <a
+                class="antialiased font-['Kumbh_Sans'] text-xs sm:text-sm font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
+                href="./index.html#contact-us"
+                >Contact Us</a
+              >
             </li>
           </ul>
 
           <div class="social-footer flex gap-8 items-center justify-center">
             <a class="fb-footer" href="./error404.html"
-              ><img class="w-[7.92px] h-[17px]"
+              ><img
+                class="w-[7.92px] h-[17px]"
                 src="./assets/images/facebook-icon.svg"
                 alt="social-media-icon"
             /></a>
             <a class="x-footer" href="./error404.html"
-              ><img class="w-[17px] h-[13.81px]"
+              ><img
+                class="w-[17px] h-[13.81px]"
                 src="./assets/images/twitter-icon.svg"
                 alt="social-media-icon"
             /></a>
             <a class="utube-footer" href="./error404.html"
-              ><img class="w-[14.06px] h-[17px]"
+              ><img
+                class="w-[14.06px] h-[17px]"
                 src="./assets/images/youtube-icon.svg"
                 alt="social-media-icon"
             /></a>
           </div>
 
-          <p class="copyright-footer font-['Kumbh_Sans'] text-xs font-normal leading-normal text-center text-[rgba(255,255,255,1)]">© Copyright 2024 - Wivali AI</p>
+          <p
+            class="copyright-footer font-['Kumbh_Sans'] text-xs font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
+          >
+              © Copyright <span id="copyright-year"></span> - Wivali AI
+
+          </p>
         </div>
       </footer>
     </section>

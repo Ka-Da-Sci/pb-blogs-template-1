@@ -184,6 +184,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const updateCopyRightYear = () => {
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  }
+
+  updateCopyRightYear();
+
   testimonialCarouselSlider();
 
   setInterval(testimonialCarouselSlider, 20000);
