@@ -221,66 +221,113 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Mock function to simulate a backend response
-const simulateBackend = (formData) => {
-  return new Promise((resolve, reject) => {
+const simulateBackend = (formData, form) => {
+  return new Promise((resolve) => {
     // Simulate a 1-second delay to mimic server processing
     setTimeout(() => {
       // Simulate validation: ensure all fields are present
-      if (
-        !formData.get("lastName") ||
-        !formData.get("firstName") ||
-        !formData.get("email") ||
-        !formData.get("phone") ||
-        !formData.get("message")
-      ) {
-        reject(new Error("All form fields are required."));
+
+      switch (form) {
+        case "newsletter":
+          if (!formData.get("email")) {
+            // reject(new Error("All form fields are required."));
+            resolve({
+              status: 403,
+              message: "Invalid email address.",
+            });
+          }
+          break;
+
+        case "contact-form":
+          if (
+            !formData.get("lastName") ||
+            !formData.get("firstName") ||
+            !formData.get("email") ||
+            !formData.get("phone") ||
+            !formData.get("message")
+          ) {
+            // reject(new Error("All form fields are required."));
+            resolve({
+              status: 403,
+              message: "All form fields are required.",
+            });
+          }
+          break;
+
+        default:
+          break;
       }
 
       // Simulate email validation on the server
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(formData.get("email"))) {
-        reject(new Error("Invalid email address."));
+        // reject(new Error("Invalid email address."));
+        resolve({
+          status: 403,
+          message: "Invalid email address.",
+        });
       }
 
       // Simulate a successful response
       resolve({
-        status: 200,
-        message: "Contact information submitted successfully.",
+        status: 201,
+        message:
+          form === "newsletter"
+            ? "You have successfully subscribed to our newsletter."
+            : form === "contact-form"
+            ? "Contact information submitted successfully."
+            : "",
       });
     }, 1000); // 1-second delay
   });
 };
 
 // Handle form submission
-const contactForm = document.querySelector(".form-container");
-contactForm.addEventListener("submit", async (event) => {
+const handleFormSubmission = (emailId, errorMessageId) => async (event) => {
   event.preventDefault(); // Prevent default form submission
 
-  const emailInput = document.getElementById("contact-us-email");
-  const errorMessage = document.getElementById(
-    "contact-us-email-error-message"
-  );
+  const emailInput = document.getElementById(emailId);
+  const errorMessage = document.getElementById(errorMessageId);
 
   // Client-side email validation
-  if (!emailValidation("contact-us-email", "contact-us-email-error-message")) {
+  if (!emailValidation(emailId, errorMessageId)) {
     return; // Stop if email is invalid
   }
 
   // Disable the submit button to prevent multiple submissions
-  const submitButton = contactForm.querySelector("button[type='submit']");
+  const submitButton = event.target.querySelector("button[type='submit']");
   submitButton.disabled = true;
-  submitButton.textContent = "Sending...";
+  submitButton.textContent.trim() !== ""
+    ? (submitButton.textContent = "Sending...")
+    : "";
 
   try {
     // Collect form data
-    const formData = new FormData(contactForm);
+    const formData = new FormData(event.target);
 
     // Simulate backend request
-    const response = await simulateBackend(formData);
+    let response;
 
-    event.target.reset();
-    // Show success message in hover card
-    toggleHoverCard("Success", response.message);
+    switch (emailId) {
+      case "email":
+        response = await simulateBackend(formData, "newsletter");
+        break;
+
+      case "contact-us-email":
+        response = await simulateBackend(formData, "contact-form");
+        break;
+
+      default:
+        break;
+    }
+
+    if (response.status === 201) {
+      event.target.reset();
+      // Show success message in hover card
+      toggleHoverCard("Success", response.message);
+    } else {
+      toggleHoverCard("Form Error!", response.message);
+    }
   } catch (error) {
     // Show error message in hover card
     toggleHoverCard(
@@ -291,7 +338,9 @@ contactForm.addEventListener("submit", async (event) => {
   } finally {
     // Re-enable the submit button
     submitButton.disabled = false;
-    submitButton.textContent = "Send";
+    submitButton.textContent.trim() !== ""
+      ? (submitButton.textContent = "Send")
+      : "";
   }
 
   // Clear email error message when user starts typing
@@ -299,35 +348,34 @@ contactForm.addEventListener("submit", async (event) => {
     errorMessage.style.display = "none";
     emailInput.classList.remove("error");
   };
-});
+};
+
+const contactForm = document.querySelector(".form-container");
+const newsletterForm = document.querySelector(".newsletter-container");
+contactForm.addEventListener(
+  "submit",
+  handleFormSubmission("contact-us-email", "contact-us-email-error-message")
+);
+newsletterForm.addEventListener(
+  "submit",
+  handleFormSubmission("email", "error-message")
+);
 
 // EMAIL FORM INPUTS VALIDATION FUNCTION
 const emailValidation = (emailId, errorMessageId) => {
   const emailInput = document.getElementById(emailId);
   const errorMessage = document.getElementById(errorMessageId);
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const form = emailInput.closest("form");
 
   document.getElementById(emailId).oninput = () => {
     errorMessage.style.display = "none";
   };
 
   if (!emailPattern.test(emailInput.value)) {
-    event.preventDefault();
     emailInput.classList.add("error");
     errorMessage.style.display = "inline";
     return false;
   } else {
-    if (emailId === "contact-us-email") {
-      toggleHoverCard("Success", "Contact information submitted successfully.");
-      // form.reset();
-    } else {
-      toggleHoverCard(
-        "Success",
-        "You have successfully subscribed to our newsletter."
-      );
-      // form.reset();
-    }
     emailInput.classList.remove("error");
     errorMessage.style.display = "none";
     return true;
@@ -340,7 +388,6 @@ const toggleHoverCard = (headerText, bodyText) => {
   const hoverCardHeader = document.getElementById("hover-card-header-text");
 
   hoverCard.classList.toggle("hidden");
-  console.log(headerText);
   hoverCardHeader.textContent = headerText;
   hoverCardBody.textContent = bodyText;
 };

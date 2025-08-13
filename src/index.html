@@ -913,6 +913,7 @@
           <h3>Send us a message</h3>
         </div>
         <form
+        method="post"
           class="form-container grid grid-cols-[1fr_1fr] gap-4 w-full sm:w-[500px]"
         >
           <div
@@ -925,7 +926,7 @@
               id="lname"
               name="lastName"
               placeholder="Last Name"
-              required
+              optional
             />
           </div>
           <div
@@ -987,7 +988,6 @@
           </div>
           <button
             class="row-start-5 row-end-6 col-[span_2] px-[10px] py-3 text-[rgba(255,255,255,1)] bg-[rgba(63,123,255,1)] border border-solid border-[rgba(63,123,255,1)] rounded-[5px] font-['Kumbh_Sans'] font-medium text-base"
-            onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
             type="submit"
           >
             Send
@@ -1043,7 +1043,7 @@
           </h2>
           <form
             class="newsletter-form relative flex justify-between w-full max-w-[200px] sm:max-w-[250px] h-9 md:h-10 bg-[rgba(255,255,255,1)] rounded-[50px]"
-            method=""
+            method="post"
           >
             <input
               class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-0 font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
@@ -1060,8 +1060,7 @@
             >
             <button
               class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-8 max-h-8 md:max-w-10 md:max-h-10 self-center pr-[2%]"
-              onclick="emailValidation('email', 'error-message')"
-              type="button"
+              type="submit"
             >
               <img class="w-full h-full rounded-full""
               src="./assets/images/customised-send-btn-icon.svg"
