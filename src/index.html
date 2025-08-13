@@ -175,17 +175,17 @@
             </div>
 
             <div
-              class="font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
+              class="flex gap-2 items-center font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
             >
-              4900+
+              <span>4900+</span>
               <span
                 onchange="caliberateRating(event)"
                 onload="caliberateRating(event)"
                 id="rating-num"
-                class="font-['Plus_Jakarta_Sans'] text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
+                class="font-['Plus_Jakarta_Sans'] -mr-1 text-sm md:text-base font-medium leading-normal text-center whitespace-pre w-full max-w-[100px]"
                 >3.5</span
               >
-              Stars
+              <span>Stars</span>
             </div>
           </div>
           <div
@@ -913,6 +913,7 @@
           <h3>Send us a message</h3>
         </div>
         <form
+        method="post"
           class="form-container grid grid-cols-[1fr_1fr] gap-4 w-full sm:w-[500px]"
         >
           <div
@@ -925,7 +926,7 @@
               id="lname"
               name="lastName"
               placeholder="Last Name"
-              required
+              optional
             />
           </div>
           <div
@@ -987,12 +988,42 @@
           </div>
           <button
             class="row-start-5 row-end-6 col-[span_2] px-[10px] py-3 text-[rgba(255,255,255,1)] bg-[rgba(63,123,255,1)] border border-solid border-[rgba(63,123,255,1)] rounded-[5px] font-['Kumbh_Sans'] font-medium text-base"
-            onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
             type="submit"
           >
             Send
           </button>
         </form>
+
+        <div id="hover-card" class="w-full hidden">
+          <div class="fixed inset-0 bg-black opacity-80 z-40"></div>
+          <div
+            class="fixed inset-0 flex items-center justify-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg mx-4 p-4 w-full max-w-2xl max-sm:text-center flex flex-col items-center gap-8"
+            >
+              <div
+                class="w-full flex flex-col gap-2 items-center font-poppins"
+              >
+                <h2 id="hover-card-header-text" class="text-lg font-poppins font-bold text-[#1E1E1E]">
+                </h2>
+                <p
+                id="hover-card-body-text"
+                  class="text-sm sm:text-base font-poppins font-normal text-[#1E1E1E]"
+                >
+                </p>
+              </div>
+              <div class="flex justify-end gap-2">
+                <button
+                onclick="toggleHoverCard()"
+                  class="bg-[#0053FA] px-8 py-1.5 text-white font-poppins font-normal rounded-lg"
+                >
+                  Okay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- <div class="contact-ph">
         <img src="./assets/images/abt-us-image.png" alt="product photo" />
@@ -1012,7 +1043,7 @@
           </h2>
           <form
             class="newsletter-form relative flex justify-between w-full max-w-[200px] sm:max-w-[250px] h-9 md:h-10 bg-[rgba(255,255,255,1)] rounded-[50px]"
-            method=""
+            method="post"
           >
             <input
               class="bg-[rgba(255,_255,_255,_1)] border-[none] rounded-[50px] w-full h-full max-w-full self-center p-[2%] pl-5 outline-0 font-['Kumbh_Sans'] text-sm font-medium leading-normal text-left text-[rgba(0,0,0,1)]"
@@ -1029,7 +1060,6 @@
             >
             <button
               class="bg-[rgba(255,255,255,1)] border-[none] rounded-full w-full h-full max-w-8 max-h-8 md:max-w-10 md:max-h-10 self-center pr-[2%]"
-              onclick="emailValidation('email', 'error-message')"
               type="submit"
             >
               <img class="w-full h-full rounded-full""
@@ -1101,8 +1131,7 @@
           <p
             class="copyright-footer font-['Kumbh_Sans'] text-xs font-normal leading-normal text-center text-[rgba(255,255,255,1)]"
           >
-              © Copyright <span id="copyright-year"></span> - Wivali AI
-
+            © Copyright <span id="copyright-year"></span> - Wivali AI
           </p>
         </div>
       </footer>
